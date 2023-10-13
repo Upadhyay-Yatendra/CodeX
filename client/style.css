@@ -9,12 +9,45 @@
 
 body {
   background: #343541;
+}/* Add these styles to your existing CSS file */
+
+/* Style for the #root div */
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* align-items: center; Center the image vertically */
+  padding: 0 20px; /* Add padding around the image */
+}
+.nav_Section{
+  width:80vw;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+/* Style for the logo image */
+#logo {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 30px;
+  margin:20px;
+  /* margin-right: 20px; Add margin to separate from other content */
+}
+
+/* Media query for small screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  #logo {
+    width: 50px; /* Adjust the width for smaller screens */
+    height: 50px; /* Adjust the height for smaller screens */
+    /* Adjust other styles as needed for small screens */
+  }
 }
 
 #app {
   margin: 0 auto;
   width: 80vw;
-  height: 100vh;
+  height: 80vh;
   background: #343541;
 
   display: flex;
@@ -22,6 +55,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
 
 #chat_container {
   flex: 1;
@@ -38,6 +72,7 @@ body {
 
   padding-bottom: 20px;
   scroll-behavior: smooth;
+  line-height: 2;
 }
 
 /* hides scrollbar */
@@ -151,4 +186,26 @@ button {
 form img {
   width: 30px;
   height: 30px;
+}
+
+
+ /* Button styles */
+ .scroll-button {
+  background-color:#444444;
+  color: white;
+  border: none;
+  /* border-radius: 50%; */
+  padding: 10px 20px;
+  font-size: 3rem;
+  cursor: pointer;
+  border-radius: 30px;
+  @media(max-width:500px) {
+      font-size:2rem;
+      border-radius:20px;
+  }
+}
+
+.scroll-button:hover {
+  background-color: white;
+  color: black;
 }
